@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<a
+  href="aula-01"
+>
+  <span
+    className="date"
+  >
+    terça-feira - 31 de dezembro - 21h00
+  </span>
+  <div
+    className="container"
+  >
+    <header
+      className="header"
+    >
+      <span
+        className="icon-check"
+      >
+        <svg
+          fill="currentColor"
+          height={20}
+          viewBox="0 0 256 256"
+          width={20}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            fill="none"
+            height="256"
+            width="256"
+          />
+          <polyline
+            fill="none"
+            points="172 104 113.3 160 84 132"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          />
+          <circle
+            cx="128"
+            cy="128"
+            fill="none"
+            r="96"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="16"
+          />
+        </svg>
+        Conteúdo liberado
+      </span>
+      <span
+        className="type"
+      >
+        AULA PRÁTICA
+      </span>
+    </header>
+    <strong
+      className="title"
+    >
+      Aula 01
+    </strong>
+  </div>
+</a>
+`;
