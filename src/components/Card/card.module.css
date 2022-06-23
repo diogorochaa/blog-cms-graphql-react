@@ -1,18 +1,18 @@
 .-card--container {
-  @apply w-96 h-96 p-0 text-white bg-slate-500 align-middle rounded-2xl;
+  @apply bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors;
 }
 .-card--content {
-  @apply p-3;
+  @apply bg-green-700 h-full p-6 flex items-center;
 }
-
-.-card--header {
-  @apply flex justify-center align-middle my-5;
+.-card--text-container {
+  @apply py-6 leading-relaxed;
 }
-
 .-card--title {
-  @apply text-2xl font-bold;
+  @apply text-2xl;
 }
-
-.-card--body {
-  @apply my-5 p-3;
+.-card--description {
+  @apply text-gray-200 text-sm mt-2;
+}
+.-card--icon {
+  @apply h-full p-6 flex items-center;
 }

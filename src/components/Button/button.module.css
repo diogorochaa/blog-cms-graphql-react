@@ -1,23 +1,9 @@
 .-button {
-  @apply font-bold border border-gray-500 rounded-3xl inline-block;
+  @apply p-4 text-sm font-bold rounded items-center justify-center flex gap-2 uppercase;
 }
 .-button--primary {
-  @apply bg-blue-600 hover:bg-blue-500 text-white;
+  @apply bg-green-500 hover:bg-green-700 transition-colors;
 }
-
 .-button--secondary {
-  @apply bg-gray-500 text-white hover:bg-gray-700;
-}
-
-.-button--inverse {
-  @apply bg-violet-500 hover:bg-violet-600;
-}
-.-button--small {
-  @apply px-2 py-1 text-sm;
-}
-.-button--medium {
-  @apply px-4 py-2 text-base;
-}
-.-button--large {
-  @apply px-6 py-3 text-lg;
+  @apply border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-gray-900 transition-colors;
 }

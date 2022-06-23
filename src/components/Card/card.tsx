@@ -1,21 +1,29 @@
-import styles from "./card.module.css"
-import cn from "clsx"
+import styles from "./card.module.css";
+import cn from "clsx";
 
 interface CardProps {
-	title: string
-	children: string
-	className?: string
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+  description?: string;
+  icon?: React.ReactNode;
 }
 
-export const Card = ({ title, className, children }: CardProps) => {
-	return (
-		<div className={cn(className, styles["-card--container"])}>
-			<div className={styles["-card--content"]}>
-				<div className={styles["-card--header"]}>
-					<h3 className={styles["-card--title"]}>{title}</h3>
-				</div>
-				<span className={styles["-card--body"]}>{children}</span>
-			</div>
-		</div>
-	)
-}
+export const Card = ({
+  title,
+  className,
+  children,
+  description,
+  icon,
+}: CardProps) => {
+  return (
+    <a className={cn(className, styles["-card--container"])}>
+      <div className={styles["-card--content"]}>{children}</div>
+      <div className={styles["-card--text-container"]}>
+        <strong className={styles["-card--title"]}>{title}</strong>
+        <p className={styles["-card--description"]}>{description}</p>
+      </div>
+      <div className={styles["-card--icon"]}>{icon}</div>
+    </a>
+  );
+};

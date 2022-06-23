@@ -8,7 +8,7 @@ export default function Event() {
     <div className={styles["container"]}>
       <Header label="oi" />
       <main className={styles["body"]}>
-        <Video label="ola" />
+        <Video />
         <Sidebar />
       </main>
     </div>

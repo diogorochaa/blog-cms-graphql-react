@@ -1,43 +1,41 @@
-import styles from "./button.module.css"
-import cn from "clsx"
+import styles from "./button.module.css";
+import cn from "clsx";
 
 interface ButtonProps {
-	variant?: "primary" | "secondary" | "inverse"
-	backgroundColor?: string
-	size?: "sm" | "md" | "lg"
-	className?: string
-	label: string
-	onClick?: () => void
+  variant?: "primary" | "secondary";
+  backgroundColor?: string;
+  size?: "sm" | "md" | "lg";
+  className?: string;
+  label: string;
+  href?: string;
+  children?: React.ReactNode;
 }
 
 export const Button = ({
-	variant = "primary",
-	size = "md",
-	backgroundColor,
-	label,
-	className,
-	...props
+  variant = "primary",
+  size = "md",
+  backgroundColor,
+  label,
+  className,
+  href,
+  children,
+  ...props
 }: ButtonProps) => {
-	const sizeClasses = {
-		[styles["-button--small"]]: size === "sm",
-		[styles["-button--medium"]]: size === "md",
-		[styles["-button--large"]]: size === "lg",
-	}
+  const variantClasses = {
+    [styles["-button--primary"]]: variant === "primary",
+    [styles["-button--secondary"]]: variant === "secondary",
+  };
 
-	const variantClasses = {
-		[styles["-button--primary"]]: variant === "primary",
-		[styles["-button--secondary"]]: variant === "secondary",
-		[styles["-button--inverse"]]: variant === "inverse",
-	}
-
-	return (
-		<button
-			type="button"
-			className={cn(className, styles["-button"], variantClasses, sizeClasses)}
-			style={{ backgroundColor }}
-			{...props}
-		>
-			{label}
-		</button>
-	)
-}
+  return (
+    <a
+      href={href}
+      type="button"
+      className={cn(className, styles["-button"], variantClasses)}
+      style={{ backgroundColor }}
+      {...props}
+    >
+      {label}
+      {children}
+    </a>
+  );
+};
