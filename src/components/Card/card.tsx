@@ -3,7 +3,7 @@ import cn from "clsx";
 
 interface CardProps {
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   description?: string;
   icon?: React.ReactNode;
