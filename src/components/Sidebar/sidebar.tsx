@@ -9,7 +9,7 @@ interface GetLessonsQueryResponse {
     title: string;
     slug: string;
     availableAt: string;
-    lessonType: "live" | "class";
+    lessonType: string;
   }[];
 }
 
