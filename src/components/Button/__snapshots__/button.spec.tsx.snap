@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<button
-  className="-button -button--primary -button--medium"
+<a
+  className="-button -button--primary"
   style={
     Object {
       "backgroundColor": undefined,
@@ -11,5 +11,5 @@ exports[`renders correctly 1`] = `
   type="button"
 >
   Button
-</button>
+</a>
 `;
