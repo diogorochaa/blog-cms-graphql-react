@@ -22,15 +22,15 @@ jobs:
       - name: Prepare cache
         uses: actions/cache@v2
         with:
-          path: ~/.yarn
+          path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
-        run: yarn
+        run: npm i
 
       - name: Run tests
-        run: yarn run test
+        run: npm test
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
