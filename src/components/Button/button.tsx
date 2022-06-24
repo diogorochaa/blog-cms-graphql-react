@@ -3,9 +3,6 @@ import cn from "clsx";
 
 interface ButtonProps {
   variant?: "primary" | "secondary";
-  backgroundColor?: string;
-  size?: "sm" | "md" | "lg";
-  className?: string;
   label: string;
   href?: string;
   children?: React.ReactNode;
@@ -13,10 +10,7 @@ interface ButtonProps {
 
 export const Button = ({
   variant = "primary",
-  size = "md",
-  backgroundColor,
   label,
-  className,
   href,
   children,
   ...props
@@ -30,8 +24,7 @@ export const Button = ({
     <a
       href={href}
       type="button"
-      className={cn(className, styles["-button"], variantClasses)}
-      style={{ backgroundColor }}
+      className={cn(styles["-button"], variantClasses)}
       {...props}
     >
       {label}

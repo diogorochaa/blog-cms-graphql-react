@@ -8,7 +8,7 @@ export default function Event() {
   const { slug } = useParams<{ slug: string }>();
   return (
     <div className={styles["container"]}>
-      <Header label="oi" />
+      <Header label="Header" />
       <main className={styles["body"]}>
         {slug ? <Video lessonSlug={slug} /> : <div className="flex-1" />}
 

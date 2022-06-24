@@ -3,11 +3,6 @@
 exports[`renders correctly 1`] = `
 <a
   className="-button -button--primary"
-  style={
-    Object {
-      "backgroundColor": undefined,
-    }
-  }
   type="button"
 >
   Button

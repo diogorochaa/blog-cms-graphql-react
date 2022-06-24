@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Card/card.tsx</title>
+    <title>Code coverage report for button.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">Card</a> card.tsx</h1>
+        <h1><a href="index.html">All files</a> button.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>29/29</span>
+                <span class='fraction'>34/34</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>29/29</span>
+                <span class='fraction'>34/34</span>
             </div>
         
             
@@ -92,7 +92,12 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -104,49 +109,59 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styles from "./card.module.css";
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import styles from "./button.module.css";
 import cn from "clsx";
 &nbsp;
-interface CardProps {
-  title: string;
+interface ButtonProps {
+  variant?: "primary" | "secondary";
+  label: string;
+  href?: string;
   children?: React.ReactNode;
-  className?: string;
-  description?: string;
-  icon?: React.ReactNode;
 }
 &nbsp;
-export const Card = ({
-  title,
-  className,
+export const Button = ({
+  variant = "primary",
+  label,
+  href,
   children,
-  description,
-  icon,
-}: CardProps) =&gt; {
+  ...props
+}: ButtonProps) =&gt; {
+  const variantClasses = {
+    [styles["-button--primary"]]: variant === "primary",
+    [styles["-button--secondary"]]: variant === "secondary",
+  };
+&nbsp;
   return (
-    &lt;a className={cn(className, styles["-card--container"])}&gt;
-      &lt;div className={styles["-card--content"]}&gt;{children}&lt;/div&gt;
-      &lt;div className={styles["-card--text-container"]}&gt;
-        &lt;strong className={styles["-card--title"]}&gt;{title}&lt;/strong&gt;
-        &lt;p className={styles["-card--description"]}&gt;{description}&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div className={styles["-card--icon"]}&gt;{icon}&lt;/div&gt;
+    &lt;a
+      href={href}
+      type="button"
+      className={cn(styles["-button"], variantClasses)}
+      {...props}
+    &gt;
+      {label}
+      {children}
     &lt;/a&gt;
   );
 };
@@ -157,16 +172,16 @@ export const Card = ({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jun 23 2022 20:39:44 GMT-0300 (Horário Padrão de Brasília)
+                at Thu Jun 23 2022 20:40:07 GMT-0300 (Horário Padrão de Brasília)
             </div>
-        <script src="../prettify.js"></script>
+        <script src="prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
     </body>
 </html>
     
